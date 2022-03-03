@@ -57,8 +57,8 @@ retorno (california,texas,florida,newYork,illinois,pensilvania,ohio,georgia,mich
     + qui pensilvania + set ohio + oit georgia + oit michigan + dez carolina
 
 contarVotos :: Entrada -> String
-contarVotos x | retorno x > 0 = " 'A' ganhou a eleicao com " ++ show (retorno x) ++ " delegados de diferenca." 
-              | retorno x < 0 = " 'B' ganhou a eleicao com " ++ show (-retorno x) ++ " delegados de diferenca."
+contarVotos x | retorno x > 0 = "Candidato 'A' ganhou a eleicao." 
+              | retorno x < 0 = "Candidato 'B' ganhou a eleicao."
               | otherwise = "A eleicao empatou."
 
 pri:: Char -> Int
