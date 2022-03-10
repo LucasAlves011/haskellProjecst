@@ -3,6 +3,9 @@ Isso é um comentário
 	em 
 		BLOCO
 -}
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Redundant bracket" #-}
+{-# OPTIONS_GHC -Wno-incomplete-patterns #-}
 
 doubleMe x = x + x
 
@@ -84,21 +87,6 @@ sec :: Char -> Int
 sec 'A' = 55
 sec 'B' = -55   
 
--- teste teste
--- teste teste
--- teste teste
--- teste definivo 
--- teste novo
-
-
-
-
-
-
-
-
-
-
-
-
-
+total'::(Int -> Int) -> Int -> Int
+total' f 0 = f 0
+total' f n = (f n) + (total' f (n-1)) 
